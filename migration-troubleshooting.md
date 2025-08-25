@@ -8,6 +8,7 @@ If you run into any problems during your migration, [please report them here](ht
 
 1. [ReferenceError: __dirname is not defined in ES module scope](#1-referenceerror-__dirname-is-not-defined-in-es-module-scope)
 2. [No dashboard/report link shown at the end of a run](#2-no-dashboardreport-link-shown-at-the-end-of-a-run)
+3. ['useCloudHostedBrowsers' does not exist in type 'PlaywrightServiceAdditionalOptions'](#3-usecloudhostedbrowsers-does-not-exist-in-type-playwrightserviceadditionaloptions)
 
 ## Known issues
 
@@ -38,3 +39,15 @@ ReferenceError: __dirname is not defined in ES module scope
 **Cause:** Detailed diagnostics reporting isn’t supported in Playwright Workspaces (Azure App Testing) at this time, so a dashboard/report link isn’t emitted.
 
 **Resolution:** In the Azure portal, you can view basic run details—browser count and duration—under your Playwright Workspace > Test runs. For richer, shareable diagnostics (screenshots, traces, logs, etc.), we recommend [publishing Playwright HTML reports using Azure Storage static website hosting](https://playwright.dev/docs/next/ci-intro#publishing-report-on-the-web), a low‑cost and scalable approach.
+
+### 3. 'useCloudHostedBrowsers' does not exist in type 'PlaywrightServiceAdditionalOptions'
+
+**Symptom:** When service config use this additional param, the run fails with an error similar to:
+
+```
+'useCloudHostedBrowsers' does not exist in type 'PlaywrightServiceAdditionalOptions'
+```
+
+**Cause:** `useCloudHostedBrowsers` is removed from options as its not required anymore.
+
+**Resolution:** Remove `useCloudHostedBrowsers` if used in playwright.service.config.ts
