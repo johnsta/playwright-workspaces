@@ -9,6 +9,8 @@ If you run into any problems during your migration, [please report them here](ht
 1. [ReferenceError: __dirname is not defined in ES module scope](#1-referenceerror-__dirname-is-not-defined-in-es-module-scope)
 2. [No dashboard/report link shown at the end of a run](#2-no-dashboardreport-link-shown-at-the-end-of-a-run)
 3. ['useCloudHostedBrowsers' does not exist in type 'PlaywrightServiceAdditionalOptions'](#3-usecloudhostedbrowsers-does-not-exist-in-type-playwrightserviceadditionaloptions)
+4. ['timeout' does not exist in type 'PlaywrightServiceAdditionalOptions'](#4-timeout-does-not-exist-in-type-playwrightserviceadditionaloptions)
+5. [TypeError: (0 , _playwright.getServiceConfig1) is not a function](#5-typeerror-0--_playwrightgetserviceconfig1-is-not-a-function)
 
 ## Known issues
 
@@ -51,3 +53,27 @@ ReferenceError: __dirname is not defined in ES module scope
 **Cause:** `useCloudHostedBrowsers` is removed from options as its not required anymore.
 
 **Resolution:** Remove `useCloudHostedBrowsers` if used in playwright.service.config.ts
+
+### 4. 'timeout' does not exist in type 'PlaywrightServiceAdditionalOptions'
+
+**Symptom:** When service config use this additional param, the run fails with an error similar to:
+
+```
+'timeout' does not exist in type 'PlaywrightServiceAdditionalOptions'
+```
+
+**Cause:** `timeout` is remained to connectTimeout from package version 1.0.0
+
+**Resolution:** Replace `timeout` with `connectTimeout` if used in playwright.service.config.ts
+
+### 5. 'TypeError: (0 , _playwright.getServiceConfig1) is not a function'
+
+**Symptom:** method not found in package:
+
+```
+'TypeError: (0 , _playwright.getServiceConfig) is not a function'
+```
+
+**Cause:** `getServiceConfig` is renamed to createAzurePlaywrightConfig.
+
+**Resolution:** Rename `getServiceConfig` to `createAzurePlaywrightConfig` in playwright.service.config.ts
