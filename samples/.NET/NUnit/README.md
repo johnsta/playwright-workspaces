@@ -19,7 +19,7 @@ If you have not yet created a workspace, please follow the [Get Started guide](.
     ```
 1. Install service package
    ```powershell
-   dotnet add package Azure.Developer.Playwright.NUnit --prerelease
+   dotnet add package Azure.Developer.Playwright.NUnit
    ```
    
 1. Build the project so the playwright.ps1 is available inside the bin directory:
