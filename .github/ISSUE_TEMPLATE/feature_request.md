@@ -1,20 +1,24 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
+about: Suggest a new feature or improvement for Playwright Workspaces
+title: "[FEATURE] <Short summary of the request>"
 labels: enhancement
-assignees: johnsta
-
+assignees: ''
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## 🌟 Is your feature request related to a problem?
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+Please describe the problem you’re trying to solve.  
+*Example: "I'm always frustrated when..."*
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## ✅ Describe the solution you’d like
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Clearly describe what you’d like to see added or changed.
+
+## 🔄 Describe alternatives you’ve considered
+
+Have you thought of other ways to solve this problem? Share any alternatives you’ve explored.
+
+## 🗒️ Additional context
+
+Add any other context, use cases, or screenshots that would help us understand your request.

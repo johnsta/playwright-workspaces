@@ -1,38 +1,45 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: "[BUG]:[Describe your issue here]"
-labels: ''
-assignees: 'johnsta'
-
+about: Report a bug or unexpected behavior in Playwright Workspaces
+title: "[BUG] <Short description of the issue>"
+labels: 'bug'
+assignees: ''
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## 🐞 Describe the bug
 
-**To Reproduce**
+Clearly describe the issue or unexpected behavior.
+
+## ✅ Expected behavior
+
+What did you expect to happen?
+
+## 🔁 To reproduce
+
 Steps to reproduce the behavior:
-1. Step 1 '...'
-2. Step 2 '....'
-3. Step 3 '....'
+1. Go to '...'
+2. Click on '...'
+3. Run command '...'
 4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## 📸 Screenshots (if applicable)
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+Add any relevant screenshots or logs to help explain your problem.
 
-**Setup information (please complete the following information):**
- - Azure Subscription Id:
- - Workspace Name:
- - Service trace Id (if available):
- - Log snippet (if available):
- - Browser on which tests are executed (if applicable):
- - Time range (in PST) when the issue was experienced:
- - Playwright Version:
-- Client machine OS:
-- OS requested on Service:
+## 🧩 Setup information
 
-**Additional context**
-Add any other context about the problem here.
+Please provide the following details to help us investigate:
+
+- **Azure Subscription ID**:  
+- **Workspace Name**:  
+- **Service Trace ID** (if available):  
+- **Log snippet** (if available):  
+- **Browser used for tests** (if applicable):  
+- **Time range (PST)** when the issue occurred:  
+- **Playwright version**:  
+- **Client machine OS**:  
+- **Requested OS on the service** (Linux/Windows):  
+
+## 🗒️ Additional context
+
+Add any other context or details that might help us reproduce or diagnose the issue.
