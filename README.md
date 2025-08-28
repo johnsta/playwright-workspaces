@@ -9,7 +9,7 @@
 
 ## Documentation
 
-The full documentation is now available on [**learn.microsoft.com**](https://aka.ms/pww.docs)
+The full documentation is now available on [**learn.microsoft.com**](https://aka.ms/pww/docs)
 
 There you’ll learn how to:
 
