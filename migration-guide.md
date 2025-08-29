@@ -36,7 +36,7 @@ This is the recommended scenario if you want to use Playwright OSS together with
    2. Add `@azure/identity`.  
    3. Update `@playwright/test` to `>= 1.50` (using one of the last three Playwright versions is recommended for best performance).  
 2. **Changes in `playwright.service.config.ts`**  
-   1. Import `getServiceConfig` from `@azure/playwright` instead of the previous package.  
+   1. Import `createAzurePlaywrightConfig` from `@azure/playwright` instead of the previous package.  
    2. Import `DefaultAzureCredential` from `@azure/identity`.  
    3. Remove the old service reporter if it’s included.  
    4. Add the new `credential: new DefaultAzureCredential()` parameter in `getServiceConfig` when using the default Entra authentication flow.  
@@ -58,18 +58,18 @@ Use this scenario if you manage browser launch directly in tests or via custom f
 
 ### Required Steps
 1. Modify your existing function that generates `connectOptions` to reflect the changes shown in the example migration PR.  
-2. Ensure the `api-version` parameter in the endpoint is updated to `2025-07-01-preview`.  
+2. Ensure the `api-version` parameter in the endpoint is updated to `2025-09-01`.  
 3. Update `PLAYWRIGHT_SERVICE_URL` and `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` environment variables with the new values.  
 
 ### Example Migration PR (before/after changes)
-- [JS manual connect migration comparison](https://github.com/microsoft/playwright-testing-service/compare/users/puagarwa/migrate-playwright-workspace-jsrunner?expand=1)
+- [JS manual connect migration comparison](ttps://github.com/microsoft/playwright-testing-service/compare/users/puagarwa/migrate-nodejs-manual?expand=1)
 
 ## .NET NUnit Using Base Classes and Service Package
 Use this scenario if you’re using the service package along with [Playwright NUnit base classes/fixtures](https://playwright.dev/dotnet/docs/test-runners#base-classes-for-playwright) (e.g., `PageTest`).
 
 ### Required Steps
 1. **Package dependency changes**  
-   1. Replace `Azure.Developer.MicrosoftPlaywrightTesting.NUnit` with `Azure.Developer.Playwright.NUnit`.  
+   1. Replace `Azure.Developer.MicrosoftPlaywrightTesting.NUnit` with `Azure.Developer.Playwright.NUnit`. Use latest package version available.
    2. Add `Azure.Identity`.  
    3. Update `Microsoft.Playwright.NUnit` to `>= 1.50` (using one of the last three Playwright versions is recommended for best performance).  
 2. **Changes in `PlaywrightServiceSetup.cs`**  
@@ -91,7 +91,7 @@ Use this scenario if you handle browser launch yourself in .NET (e.g., with cust
 
 ### Required Steps
 1. Modify the function that builds `connectOptions` to match the changes shown in the example migration PR.  
-2. Update the `api-version` parameter in the endpoint is updated to `2025-07-01-preview`.  
+2. Update the `api-version` parameter in the endpoint is updated to `2025-09-01`.  
 3. Update `PLAYWRIGHT_SERVICE_URL` and `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` environment variables with the new values.  
 
 ### Example Migration PR (before/after changes)
@@ -107,8 +107,12 @@ See the troubleshooting guide for common problems and resolution tips: [Migratio
 - Workspace ID format is now a GUID without the `region_` prefix.
 - Package name Changes
    - `Azure.Developer.MicrosoftPlaywrightTesting.NUnit` with `Azure.Developer.Playwright.NUnit`
-   - `@azure/microsoft-playwright-testing` with `@azure/playwright`  
-- API version updated to `2025-07-01-preview`.
+   - `@azure/microsoft-playwright-testing` with `@azure/playwright`
+   - getServiceConfig renamed to createAzurePlaywrightConfig
+   - timeout renamed to connectTimeout
+   - useCloudHostedBrowsers param is removed
+   - use runName inplace of runId
+- API version updated to `2025-09-01`.
 
 ## References
 - [Playwright Workspaces documentation](https://aka.ms/pww/docs)
