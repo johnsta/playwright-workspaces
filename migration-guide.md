@@ -62,7 +62,7 @@ Use this scenario if you manage browser launch directly in tests or via custom f
 3. Update `PLAYWRIGHT_SERVICE_URL` and `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` environment variables with the new values.  
 
 ### Example Migration PR (before/after changes)
-- [JS manual connect migration comparison](https://github.com/microsoft/playwright-testing-service/compare/users/puagarwa/migrate-playwright-workspace-jsrunner?expand=1)
+- [JS manual connect migration comparison](ttps://github.com/microsoft/playwright-testing-service/compare/users/puagarwa/migrate-nodejs-manual?expand=1)
 
 ## .NET NUnit Using Base Classes and Service Package
 Use this scenario if you’re using the service package along with [Playwright NUnit base classes/fixtures](https://playwright.dev/dotnet/docs/test-runners#base-classes-for-playwright) (e.g., `PageTest`).
