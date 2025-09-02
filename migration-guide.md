@@ -18,9 +18,9 @@ For most users, the migration involves:
 * [Other Scenarios](#other-scenarios)
 
   * [Playwright Test Runner with `connectOptions`](#playwright-test-runner-with-connectoptions)
-  * [Node.js Manual Browser Launch](#nodejs-manual-browser-launch-using-browserconnect)
-  * [.NET NUnit with Service Package](#net-nunit-with-service-package-and-base-classes)
-  * [.NET Manual Connect](#net-with-manual-connectasync)
+  * [Node.js Manual Browser Launch](#nodejs-manual-browser-launch)
+  * [.NET NUnit with Service Package](#net-nunit-with-service-package)
+  * [.NET Manual Connect](#net-manual-connect)
 * [Troubleshooting](#troubleshooting)
 * [Summary of Key Changes](#summary-of-key-changes)
 * [References](#references)
@@ -47,9 +47,9 @@ Most users will fall under the first scenario (marked with ✅).
 | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | ✅ [**Playwright Test Runner with Service Package (most common)**](#playwright-test-runner-with-service-package-most-common) | **Using `@playwright/test` with `getServiceConfig`**    |
 | [Playwright Test Runner with `connectOptions`](#playwright-test-runner-with-connectoptions)                                 | Custom connection logic in `playwright.config.ts`       |
-| [Node.js Manual Browser Launch](#nodejs-manual-browser-launch-using-browserconnect)                                         | Direct use of `browser.connect()`                       |
-| [.NET NUnit with Service Package](#net-nunit-with-service-package-and-base-classes)                                         | Using NUnit base classes with Microsoft service package |
-| [.NET Manual Connect](#net-with-manual-connectasync)                                                                        | Using `Browser.ConnectAsync` in .NET                    |
+| [Node.js Manual Browser Launch](#nodejs-manual-browser-launch)                                                              | Direct use of `browser.connect()`                       |
+| [.NET NUnit with Service Package](#net-nunit-with-service-package)                                                          | Using NUnit base classes with Microsoft service package |
+| [.NET Manual Connect](#net-manual-connect)                                                                                  | Using `Browser.ConnectAsync` in .NET                    |
 
 
 ## Playwright Test Runner with Service Package (Most Common)
@@ -122,7 +122,7 @@ PLAYWRIGHT_SERVICE_ACCESS_TOKEN=<new_token>
 
 ---
 
-### [Node.js Manual Browser Launch](#nodejs-manual-browser-launch-using-browserconnect)
+### [Node.js Manual Browser Launch](#nodejs-manual-browser-launch)
 
 Use this if you're directly connecting to the cloud browser using `browser.connect()`.
 
@@ -143,7 +143,7 @@ PLAYWRIGHT_SERVICE_ACCESS_TOKEN=<new_token>
 
 ---
 
-### [.NET NUnit with Service Package](#net-nunit-with-service-package-and-base-classes)
+### [.NET NUnit with Service Package](#net-nunit-with-service-package)
 
 Use this if you’re using NUnit with `PageTest` and the Microsoft service package.
 
@@ -203,7 +203,7 @@ PLAYWRIGHT_SERVICE_ACCESS_TOKEN=<new_token>
 
 ---
 
-### [.NET Manual Connect](#net-with-manual-connectasync)
+### [.NET Manual Connect](#net-manual-connect)
 
 Use this if you're calling `Browser.ConnectAsync` manually in your .NET code.
 
