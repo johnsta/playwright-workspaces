@@ -42,6 +42,10 @@ ReferenceError: __dirname is not defined in ES module scope
 
 **Resolution:** In the Azure portal, you can view basic run details—browser count and duration—under your Playwright Workspace > Test runs. For richer, shareable diagnostics (screenshots, traces, logs, etc.), we recommend [publishing Playwright HTML reports using Azure Storage static website hosting](https://playwright.dev/docs/next/ci-intro#publishing-report-on-the-web), a low‑cost and scalable approach.
 
+👉 We're tracking this limitation and collecting feedback:  
+[GitHub Discussion: Built-in Reporting for Playwright Workspaces](https://github.com/azure/playwright-workspaces/issues/23)
+
+
 ### 3. 'useCloudHostedBrowsers' does not exist in type 'PlaywrightServiceAdditionalOptions'
 
 **Symptom:** When service config use this additional param, the run fails with an error similar to:
