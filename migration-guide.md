@@ -243,7 +243,7 @@ For common migration problems and resolution tips, see:
 Playwright Workspaces does not currently include built-in reporting. You can [publish Playwright HTML reports](https://playwright.dev/docs/ci-intro#publishing-report-on-the-web) using Azure Storage for similar results, but it requires manual setup.
 
 We’re tracking this topic and collecting feedback:  
-👉 [Discussion: Built-in Reporting for Playwright Workspaces](https://github.com/microsoft/playwright-workspaces/issues/23)
+👉 [Discussion: Built-in Reporting for Playwright Workspaces](https://github.com/azure/playwright-workspaces/issues/23)
 
 ### Package and API Changes
 
