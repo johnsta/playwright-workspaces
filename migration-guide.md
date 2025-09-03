@@ -23,6 +23,7 @@ For most users, the migration involves:
   * [.NET Manual Connect](#net-manual-connect)
 * [Troubleshooting](#troubleshooting)
 * [Summary of Key Changes](#summary-of-key-changes)
+  * [Reporting Changes](#reporting-changes)
 * [References](#references)
 
 
@@ -235,8 +236,14 @@ For common migration problems and resolution tips, see:
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Resource Provider** | Changed to `Microsoft.LoadTestService`                                                                                                                                |
 | **Portal Management** | All resource operations now in the Azure Portal                                                                                                                       |
-| **Reporting**         | Built-in reporting is no longer supported. Use [Playwright HTML reports](https://playwright.dev/docs/next/ci-intro#publishing-report-on-the-web) with static hosting. |
 | **Workspace ID**      | Now a GUID (no `region_` prefix)                                                                                                                                      |
+
+### Reporting Changes
+
+Playwright Workspaces does not currently include built-in reporting. You can [publish Playwright HTML reports](https://playwright.dev/docs/ci-intro#publishing-report-on-the-web) using Azure Storage for similar results, but it requires manual setup.
+
+We’re tracking this topic and collecting feedback:  
+👉 [Discussion: Built-in Reporting for Playwright Workspaces](https://github.com/microsoft/playwright-workspaces/issues/23)
 
 ### Package and API Changes
 
